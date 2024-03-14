@@ -1,15 +1,33 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Principal {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Filme meuFilme = new Filme();
+        Scanner in = new Scanner(System.in);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+        System.out.println("Insira o titulo do filme:");
+        meuFilme.titulo = in.nextLine();
+        System.out.println("Insira ano de lançamento do filme:");
+        meuFilme.anoDeLancamento = in.nextInt();
+        System.out.println("O filme é incluido no plano?");
+        meuFilme.incluidoNoPlano = in.nextBoolean();
+        System.out.println("Insira a avaliação?");
+        meuFilme.somaAvaliacoes = in.nextDouble();
+        System.out.println("insira o total de avaliações:");
+        meuFilme.totalDeAvaliacoes = in.nextInt();
+        meuFilme.fichaTecnica();
+
+
+        System.out.println("Insira a nova avaliação");
+        meuFilme.avaliar(in.nextDouble());
+
+        meuFilme.fichaTecnica();
+
+        System.out.println(String.format("A media é:%s",meuFilme.obterMedia()));
+
+
     }
 }
