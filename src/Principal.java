@@ -1,3 +1,5 @@
+import br.com.alura.screenmatch.modelos.Filme;
+
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -9,15 +11,15 @@ public class Principal {
 
 
         System.out.println("Insira o titulo do filme:");
-        meuFilme.titulo = in.nextLine();
+        meuFilme.setTitulo(in.nextLine());
         System.out.println("Insira ano de lançamento do filme:");
-        meuFilme.anoDeLancamento = in.nextInt();
+        meuFilme.setAnoDeLancamento(in.nextInt());
         System.out.println("O filme é incluido no plano?");
-        meuFilme.incluidoNoPlano = in.nextBoolean();
+        meuFilme.setIncluidoNoPlano(in.nextBoolean());
         System.out.println("Insira a avaliação?");
-        meuFilme.somaAvaliacoes = in.nextDouble();
+        meuFilme.setSomaAvaliacoes(in.nextDouble());
         System.out.println("insira o total de avaliações:");
-        meuFilme.totalDeAvaliacoes = in.nextInt();
+        meuFilme.setTotalDeAvaliacoes(in.nextInt());
         meuFilme.fichaTecnica();
 
 
